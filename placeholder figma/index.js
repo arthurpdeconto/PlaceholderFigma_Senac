@@ -43,9 +43,9 @@ menuItems.forEach(item => {
     })
 })
 
-// ============== MESSAGES ============== 
+// ============== MENSAGENS ============== 
 
-//Searches messages
+//PROCURA MSGS
 const searchMessage = () => {
     const val = messageSearch.value.toLowerCase();
     message.forEach(user => {
@@ -58,10 +58,10 @@ const searchMessage = () => {
     })
 }
 
-//Search for messages
+//procura
 messageSearch.addEventListener('keyup', searchMessage);
 
-//Highlight messages card when messages menu item is clicked
+// Highlighter
 messageNotification.addEventListener('click', () => {
     messages.style.boxShadow = '0 0 1rem var(--color-primary)';
     messageNotification.querySelector('.notification-count').style.display = 'none';
@@ -70,14 +70,14 @@ messageNotification.addEventListener('click', () => {
     }, 2000);
 })
 
-// ============== THEME / DISPLAY CUSTOMIZATION ============== 
+// ============== THEME ============== 
 
-// Opens Modal
+// Abre Modal
 const openThemeModal = () => {
     themeModal.style.display = 'grid';
 }
 
-// Closes Modal
+// Fecha Modal
 const closeThemeModal = (e) => {
     if(e.target.classList.contains('customize-theme')) {
         themeModal.style.display = 'none';
@@ -130,14 +130,14 @@ fontSize.forEach(size => {
    })
 })
 
-// Remove active class from colors
+// tira a classes das cores
 const changeActiveColorClass = () => {
     colorPalette.forEach(colorPicker => {
         colorPicker.classList.remove('active');
     })
 }
 
-// Change color primary
+// Muda a cor do tema
 colorPalette.forEach(color => {
     color.addEventListener('click', () => {
         let primary;
@@ -160,12 +160,12 @@ colorPalette.forEach(color => {
     })
 })
 
-//Theme Background Values
+// Valor Backgroud
 let lightColorLightness;
 let whiteColorLightness;
 let darkColorLightness;
 
-// Changes background color
+// Muda background cor
 const changeBG = () => {
     root.style.setProperty('--light-color-lightness', lightColorLightness);
     root.style.setProperty('--white-color-lightness', whiteColorLightness);
